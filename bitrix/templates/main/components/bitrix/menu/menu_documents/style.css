@@ -1,0 +1,26 @@
+     div.links {
+            background:lightgray; /* Цвет фона */
+            padding:0px;
+			padding-top:7px;
+			padding-bottom:7px;
+            margin: 0px auto; 
+            width: 800px;
+           font-family:'Segoe UI';
+           font-size: 13pt;
+        }
+
+            div.links a {
+                color:#3C3333; /* Цвет ссылок */
+                display: inline-block; /* Строчно-блочный элемент */
+                border-left: 1px solid #3C3333; /* Параметры рамки слева */
+                padding: 0px 10px; /* Поля вокруг ссылок */
+                text-decoration:none;
+            }
+
+                div.links a:first-child {
+                    border-left: none; /* Убираем первую линию слева */
+                }
+
+                div.links a:hover{ color:brown;}
+
+

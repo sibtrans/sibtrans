@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>
+
+    </title>
+    <style type="text/css">
+        @media print {
+            .noprint {
+                display: none !important;
+            }
+        }
+
+        @page {
+            margin: 0cm;
+        }
+
+        td {
+            font-family: 'Segoe UI';
+            font-size: smaller;
+            padding: 2px;
+        }
+    </style>
+    <script language="javascript">
+
+	     function PrintContent(el)
+          {
+		    if(getInternetExplorerVersion()!==-1)
+		     {
+			 //	alert(2);
+		      var browserStub = '<OBJECT ID="webBrowser" WIDTH=0 HEIGHT=0 CLASSID="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2"></OBJECT>';
+			  document.body.insertAdjacentHTML('beforeEnd', browserStub);
+			  webBrowser.ExecWB(7, 1);
+			 webBrowser.outerHTML = '';
+			// window.close();
+	         }
+		  else
+		     {
+			 //	alert(1);
+		      var restorepadge = document.body.innerHTML;
+              var printcontent = document.getElementById(el).innerHTML;
+              document.body.innerHTML = printcontent;
+              window.print();
+              document.body.innerHTML = restorepadge;
+		     }
+		  }
+
+                            function getInternetExplorerVersion()
+                            {
+
+                                var rv = -1;
+                                if (navigator.appName == 'Microsoft Internet Explorer')
+                                {
+                                    var ua = navigator.userAgent;
+                                    var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+                                    if (re.exec(ua) != null)
+                                        rv = parseFloat( RegExp.$1 );
+                                }
+                                else if (navigator.appName == 'Netscape')
+                                {
+                                    var ua = navigator.userAgent;
+                                    var re  = new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})");
+                                    if (re.exec(ua) != null)
+                                        rv = parseFloat( RegExp.$1 );
+                                }
+                                return rv;
+                            }
+
+    </script>
+
+
+</head>
+<body style="margin:0;">
+    <div>
+        <table style="width:100%;">
+            <tbody>
+                <tr>
+                    <td>
+                        <table class="noprint" style="width:85%; border-width:medium; padding-left:85px;">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p style="font-size:x-small;">
+                                            Прежде чем отправлять документ на печать, воспользуйтесь предварительным просмотром (англ. <i>Print preview</i>) и убедитесь<br>
+                                            в корректном отображении документа.<br>
+                                            <b>Данный документ не является бухгалтерским документом и представляется для ознакомления.</b>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id="Button1" type="button" onclick="PrintContent('content')" value="Напечатать" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom:dotted; ">
+                                        <p style="font-size:x-small; vertical-align:text-bottom; margin-bottom:0; text-align:center;">
+                                            информационный облок от начала страницы до пунктирной линии на печать не выводится
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="content">
+        <table style="margin-left:85px; width:85%; margin-top:35px;">
+            <tbody>
+                <tr>
+                    <td style="border-bottom:solid; border-color:silver; border-width:thin;"><p style="font-size:x-large; margin:10px; font-weight:bolder; color:firebrick">ТТН №{NTTN}</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="margin-left:85px; width:85%; margin-top:35px;">
+            <tbody>
+                <tr>
+                    <td colspan="3" style="width:100px; font-size:large;"><b>Субъекты перевозки</b></td>
+                    <td style="width:20px;"></td>
+                    <td colspan="2" style="width:100px; font-size:large;"><b>Информация</b></td>
+
+                </tr>
+                <tr>
+                    <td style="width:100px;"><b>Пункт отпр.:</b></td>
+                    <td style="width:20px;"></td>
+                    <td style="width:250px;">{DEPARTURE_POINT}</td>
+                    <td></td>
+                    <td style="width:250px;"><b>Введена в базу:</b></td>
+                    <td nowrap>{D_INPUTDB}</td>
+
+                </tr>
+                <tr>
+                    <td style="width:100px;"><b>Пункт назн.:</b></td>
+                    <td style="width:20px;"></td>
+                    <td style="width:250px;">{DESTINATION_POINT}</td>
+                    <td></td>
+                    <td style="width:250px;"><b>Оператор:</b></td>
+                    <td nowrap>{FIO_OPERATOR}</td>
+
+                </tr>
+                <tr>
+                    <td style="width:100px;"><b>Отправитель</b></td>
+                    <td style="width:20px;"></td>
+                    <td style="width:250px;">{SENDER}</td>
+
+                    <td></td>
+                    <td rowspan="2" style="width:250px;"><b>Принят к перевозке в пункте отправления:</b></td>
+                    <td nowrap>{D_RECEIVE}</td>
+
+                </tr>
+                <tr>
+                    <td style="width:100px;"><b>Получатель</b></td>
+                    <td style="width:20px;"></td>
+                    <td style="width:250px;">{CONSIGNEE}</td>
+
+
+                    <td></td>
+                    <td></td>
+
+                </tr>
+                <tr>
+                    <td style="width:100px;"><b>Плательщик</b></td>
+                    <td style="width:20px;"></td>
+                    <td style="width:250px;">{PAYER}</td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+            </tbody>
+        </table>
+
+        <table style="margin-left:85px; width:85%; margin-top:10px;">
+            <tbody>
+                <tr>
+                    <td colspan="3" style="width:100px; font-size:large;"><b>Объекты перевозки(груз)</b></td>
+                    <td style="width:20px;"></td>
+                    <td colspan="5" style="width:100px; font-size:large;"></td>
+
+                </tr>
+                <tr>
+                    <td style="width:120px; white-space:nowrap;"><b>Характер груза:</b></td>
+                    <td style="width:20px;"></td>
+                    <td style="width:250px;">{CARGO_TYPE}</td>
+                    <td></td>
+                    <td style="width:60px;"><b></b></td>
+                    <td style="width:60px;"><b>Фактич</b></td>
+                    <td><b>Тепло</b></td>
+                    <td><b>Негаб</b></td>
+                    <td><b>Хрупкий</b></td>
+                </tr>
+                <tr>
+                    <td style="width:120px; white-space:nowrap;"><b>Цена за объём:</b></td>
+                    <td style="width:20px;"></td>
+                    <td style="width:100px;">{PRICE_VOL}</td>
+                    <td></td>
+                    <td style="width:60px;"><b>Мест:</b></td>
+                    <td style="width:60px;">{F_MEST}</td>
+                    <td>{W_MEST}</td>
+                    <td>{O_MEST}</td>
+                    <td>{H_MEST}</td>
+
+                </tr>
+                <tr>
+                    <td style="width:120px; white-space:nowrap;"><b>Цена за вес:</b></td>
+                    <td style="width:100px;"></td>
+                    <td style="width:250px;">{PRICE_WEI}</td>
+
+                    <td></td>
+                    <td style="width:60px;"><b>Объём:</b></td>
+                    <td style="width:60px;">{F_VOL}</td>
+                    <td>{W_VOL}</td>
+                    <td>{O_VOL}</td>
+                    <td>{H_VOL}</td>
+                </tr>
+                <tr>
+                    <td style="width:120px;"></td>
+                    <td style="width:100px;"></td>
+                    <td style="width:250px;"></td>
+                    <td></td>
+                    <td style="width:60px;"><b>Вес:</b></td>
+                    <td style="width:60px;">{F_WEI}</td>
+                    <td>{W_WEI}</td>
+                    <td>{O_WEI}</td>
+                    <td>{H_WEI}</td>
+                </tr>
+
+                <tr>
+                    <td colspan="3" style="white-space:nowrap; font-size:large; width:50%; vertical-align:bottom;" height="40px"><b>Автоуслуги в пункте отправления</b></td>
+                    <td></td>
+                    <td colspan="5" style="white-space:nowrap; font-size:large; width:50%; vertical-align:bottom;" height="40px"><b>Автоуслуги в пункте назначения</b></td>
+                </tr>
+                <tr>
+                    <td colspan="3">Итого авто: {S_AO} руб. Экспедирование: {S_EO} руб.</td>
+                    <td></td>
+                    <td colspan="5">Итого авто: {S_AP} руб. Экспедирование: {S_EP} руб.</td>
+                </tr>
+                <tr style="height:20px;">
+                    <td colspan="3"></td>
+                    <td></td>
+                    <td colspan="5"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="white-space:nowrap; font-size:large; width:50%;"><b>Доп. услуги в пункте отправления</b></td>
+                    <td></td>
+                    <td colspan="5" style="white-space:nowrap; font-size:large; width:50%;"><b>Доп. услуги в пункте назначения</b></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="width:50%;">
+                        <table border=1 CELLSPACING=0 CELLPADDING=2 style="border-color:lightgray;margin:0px; width:95%; border-width:thin;">
+                            <tbody>
+                                <tr>
+                                    <td style="width:120px;">Услуги по упаковки<br> груза</td>
+                                    <td style="width:30px;"></td>
+                                    <td style="width:120px;">Приём груза после<br>18(20) часов</td>
+                                    <td style="width:30px;"></td>
+                                </tr>
+
+                                <tr>
+                                    <td style="width:120px;">Услуги по маркировки <br> груза</td>
+                                    <td style="width:30px;"></td>
+                                    <td style="width:120px;">Такелаж</td>
+                                    <td style="width:30px;"></td>
+                                </tr>
+
+                                <tr>
+                                    <td style="width:120px;">Услуги по <br>консолидации груза</td>
+                                    <td style="width:30px;"></td>
+                                    <td style="width:120px;">Помещение на склад</td>
+                                    <td style="width:30px;"></td>
+                                </tr>
+
+                                <tr>
+                                    <td style="width:120px;">Пофактурный приём<br>груза</td>
+                                    <td style="width:30px;"></td>
+                                    <td style="width:120px;">Хранение</td>
+                                    <td style="width:30px;"></td>
+                                </tr>
+
+                                <tr>
+                                    <td style="width:120px;">Упаковка в мешки под<br> пломбу</td>
+                                    <td style="width:30px;"></td>
+                                    <td style="width:120px;">Упаковка стрейч-<br>плёнкой</td>
+                                    <td style="width:30px;"></td>
+                                </tr>
+                                <tr>
+                                    <td style="width:120px;">Изготовление<br>обрешётки</td>
+                                    <td style="width:30px;"></td>
+                                    <td></td>
+                                    <td style="width:30px;"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" height="10px"></td>
+                                    <td style="width:30px;"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">Доставка груза по {POINT_DEPAR}</td>
+                                    <td style="width:30px;"></td>
+                                </tr>
+                        </table>
+                    </td>
+                    <td></td>
+                    <td colspan="5" style="width:50%; vertical-align:top;">
+                        <table border=1 CELLSPACING=0 CELLPADDING=2 style="border-color:lightgray; margin:0px; width:100%; border-width:thin;">
+                            <tbody>
+                                <tr>
+                                    <td colspan="3" height="20px;">Услуги по упаковки груза</td>
+                                    <td style="width:30px;"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" height="20px;">Услуги по доставке к согласованному времени</td>
+                                    <td style="width:30px;"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" height="20px;">Такелаж</td>
+                                    <td style="width:30px;"></td>
+                                </tr>
+                                <tr>
+                                    <td height="20px;">Помещение на склад</td>
+                                    <td style="width:30px;"></td>
+                                    <td>Хранение</td>
+                                    <td style="width:30px;"></td>
+                                </tr>
+                                <tr>
+                                    <td height="20px;">Упаковка в мешки под пломбу</td>
+                                    <td style="width:30px;"></td>
+                                    <td>Упаковка стрейч-плёнкой</td>
+                                    <td style="width:30px;"></td>
+                                </tr>
+                                <tr>
+                                    <td height="20px;">Изготовление обрешётки</td>
+                                    <td style="width:30px;"></td>
+                                    <td></td>
+                                    <td style="width:30px;"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" height="10px;"></td>
+                                    <td style="width:30px;"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" height="20px;">Доставка груза по {POINT_ARRI}</td>
+                                    <td style="width:30px;"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3" style="width:50%;" height="30px;"><b>Итого доп. услуги в пункте отправления: {SUM_DEP} руб.</b></td>
+                    <td><span></span></td>
+                    <td colspan="5" style="width:50%;" height="30px;"><b>Итого доп. услуги в пункте назначения: {SUM_ARR} руб.</b></td>
+                </tr>
+                <tr>
+                    <td height="20px" colspan="50">Примечание: {TTN_NOTE}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table style="margin-left:85px; width:85%; margin-top:20px;">
+            <tbody>
+                <tr>
+                    <td style="border-top:solid; border-color:silver; border-width:thin;">
+                        <p style="margin-left:0; margin-right:0; margin-top:10px; padding:0; font-size:x-large; font-weight:bold; color:firebrick; text-align:right;">
+                            Всего к выплате: {SUM_PAY} руб. Оплачено: {PAID} руб.<br>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+</body>
+</html>

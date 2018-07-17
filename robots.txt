@@ -1,0 +1,2 @@
+User-agent: Yandex
+Crawl-delay: 5 # задает таймаут в 5 секунды

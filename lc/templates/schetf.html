@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>
+
+    </title>
+    <style type="text/css">
+        @media print {
+            .noprint {
+                display: none !important;
+            }
+        }
+		* {
+			font-size:14px;
+		}
+        @page {
+            margin: 0cm;
+			size: landscape;
+        }
+        td {
+            font-size: smaller;
+        }
+    </style>
+    <script language="javascript">
+
+	     function PrintContent(el)
+          {
+		    if(getInternetExplorerVersion()!==-1)
+		     {
+			 //	alert(2);
+		      var browserStub = '<OBJECT ID="webBrowser" WIDTH=0 HEIGHT=0 CLASSID="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2"></OBJECT>';
+			  document.body.insertAdjacentHTML('beforeEnd', browserStub);
+			  webBrowser.ExecWB(7, 1);
+			 webBrowser.outerHTML = '';
+			// window.close();
+	         }
+		  else
+		     {
+			 //	alert(1);
+		      var restorepadge = document.body.innerHTML;
+              var printcontent = document.getElementById(el).innerHTML;
+              document.body.innerHTML = printcontent;
+              window.print();
+              document.body.innerHTML = restorepadge;
+		     }
+		  }
+
+                            function getInternetExplorerVersion()
+                            {
+
+                                var rv = -1;
+                                if (navigator.appName == 'Microsoft Internet Explorer')
+                                {
+                                    var ua = navigator.userAgent;
+                                    var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+                                    if (re.exec(ua) != null)
+                                        rv = parseFloat( RegExp.$1 );
+                                }
+                                else if (navigator.appName == 'Netscape')
+                                {
+                                    var ua = navigator.userAgent;
+                                    var re  = new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})");
+                                    if (re.exec(ua) != null)
+                                        rv = parseFloat( RegExp.$1 );
+                                }
+                                return rv;
+                            }
+
+    </script>
+
+
+</head>
+<body style="margin:0;">
+    <div>
+        <table style="width:100%;">
+            <tbody>
+                <tr>
+                    <td>
+                        <table class="noprint" style="width:50%; border-width:medium; padding-left:95px;">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p style="font-size:x-small;">
+                                            Прежде чем отправлять документ на печать, воспользуйтесь предварительным просмотром (англ. <i>Print preview</i>) и убедитесь<br>
+                                            в корректном отображении документа.<br>
+                                            <b>Данный документ не является бухгалтерским документом и представляется для ознакомления.</b>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id="Button1" type="button" onclick="PrintContent('content')" value="Напечатать" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom:dotted; ">
+                                        <p style="font-size:x-small; vertical-align:text-bottom; margin-bottom:0; text-align:center;">
+                                            информационный облок от начала страницы до пунктирной линии на печать не выводится
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="content">
+        <table style="width:80%; padding-left:95px; padding-top:45px;">
+            <tbody>
+                <tr style="font-size:large;">
+                    <td>
+                        <b>Счёт-фактура № {NSCH} от {D_NSCH} г.</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Продавец: {SELLER}</td>
+                </tr>
+                <tr>
+                    <td>Адрес: {ADDRESS_SELLER}</td>
+                </tr>
+                <tr>
+                    <td>ИНН/КПП продавца: {INN_KPP_SELLER}</td>
+                </tr>
+                <tr>
+                    <td>Грузоотправитель и его адрес: {NAMeSHIPPER}, {SHIPPER_ADRESS}</td>
+                </tr>
+                <tr>
+                    <td>Грузополучатель и его адрес: {NAMeCONSIGNEE}, {CONSIGNEE_ADRESS}</td>
+                </tr>
+                <tr>
+                    <td>К платёжно-расчётному документу № {NPLAT_RASCHET_DOC} от {D_NPLAT}</td>
+                </tr>
+                <tr>
+                    <td>Покупатель:{NAMeBUYER}</td>
+                </tr>
+                <tr>
+                    <td>Адрес:{BUYER_ADRESS}</td>
+                </tr>
+                <tr>
+                    <td>ИНН/КПП покупателя: {INN_KPP_BUYER}</td>
+                </tr>
+                <tr>
+                    <td>Валюта: наименование, код</td>
+                </tr>
+                <tr>
+                    <td>{NAME_FOREX}, {KOD_FOREX}</td>
+                </tr>
+            </tbody>
+        </table>
+        <table border=1 CELLSPACING=0 CELLPADDING=2 bordercolor="black" style="width:85%; margin-left:95px; margin-right:38px;">
+            <tbody>
+                <tr style="text-align:center;">
+                    <td rowspan="2">
+                        Наименование товара (описание выполненных работ, оказанных услуг), имущественного права
+                    </td>
+                    <td colspan="2">
+                        Единица<br>измерения
+                    </td>
+                    <td rowspan="2">
+                        Коли-<br>чество (объём)
+                    </td>
+                    <td rowspan="2">
+                        Цена (тариф) за единицу измерения
+                    </td>
+                    <td rowspan="2">
+                        Стоимость<br>товаров (работ, услуг), имущественных прав без налога-<br>всего
+                    </td>
+                    <td rowspan="2">В том числе сумма акциза</td>
+                    <td rowspan="2">Налоговая ставка</td>
+                    <td rowspan="2">Сумма налога, предъявляемая покупателю</td>
+
+                    <td rowspan="2">
+                        Стоимость<br>товаров (работ, услуг), имущественных прав с налогом-<br>всего
+                    </td>
+                    <td colspan="2">Страна<br>происхождения товара</td>
+                    <td rowspan="2">Номер<br>таможенной<br>декларации</td>
+                </tr>
+                <tr style="text-align:center;">
+                    <td>Код</td>
+                    <td>условное обозначение (национальное)</td>
+                    <td>цифровой код</td>
+                    <td>краткое наименование</td>
+                </tr>
+                <tr style="text-align:center;">
+                    <td>1</td>
+                    <td>2</td>
+                    <td>2а</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>10а</td>
+                    <td>11</td>
+                </tr>
+                {ROWS}
+                <tr>
+                    <td colspan="5" style="text-align:left;"><b>Всего к оплате:</b></td>
+                    <td>{SUmNNALOG}</td>
+                    <td colspan="2"></td>
+                    <td>{SUmNALOG}</td>
+                    <td>{SUmYNALOG}</td>
+                    <td colspan="3"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width:70%; margin-left:95px; margin-right:38px; margin-top:15px;">
+            <tbody>
+                <tr>
+                    <td style="width:170px;">Руководитель организации или иное уполномоченное лицо</td>
+                    <td style="width:90px; border-bottom:solid; border-width:thin;"></td>
+                    <td style="width:10px;">&nbsp;</td>
+                    <td style="width:100px; border-bottom:solid; text-align:center; border-width:thin;">{FIO_BOSS}</td>
+
+                    <td style="width:10px;">&nbsp;</td>
+
+                    <td style="width:140px;">Главный бухгалтер или иное уполномоченное лицо</td>
+                    <td style="width:10px;">&nbsp;</td>
+                    <td style="width:90px; border-bottom:solid; border-width:thin;"></td>
+                    <td style="width:10px;">&nbsp;</td>
+                    <td style="width:100px; border-bottom:solid; text-align:center; border-width:thin;">{FIO_BUH}</td>
+                </tr>
+                <tr>
+                    <td style="width:170px;"></td>
+                    <td style="width:90px; text-align:center; font-size:x-small; margin:0; vertical-align:text-top;">(подпись)</td>
+                    <td style="width:10px;">&nbsp;</td>
+                    <td style="width:100px; text-align:center; font-size:x-small; margin:0; vertical-align:text-top;">(ф.и.о.)</td>
+                    <td style="width:10px;">&nbsp;</td>
+
+                    <td style="width:140px;"></td>
+
+                    <td style="width:10px;">&nbsp;</td>
+                    <td style="width:90px; text-align:center; font-size:x-small; margin:0; vertical-align:text-top;">(подпись)</td>
+                    <td style="width:10px;">&nbsp;</td>
+                    <td style="width:100px; text-align:center; font-size:x-small; margin:0; vertical-align:text-top;">(ф.и.о.)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

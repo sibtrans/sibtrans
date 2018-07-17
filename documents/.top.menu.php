@@ -1,0 +1,46 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Прайсы", 
+		"/documents/praysy.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Договора", 
+		"/documents/dogovora.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Бланки", 
+		"/documents/blanki.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Доверенности", 
+		"/documents/doverennosti.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Реквизиты", 
+		"/documents/rekvizity.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Правили перевозки", 
+		"/documents/pravili-perevozki.php", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

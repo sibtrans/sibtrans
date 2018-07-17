@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>
+
+    </title>
+    <style type="text/css">
+        @media print {
+            .noprint {
+                display: none !important;
+            }
+        }
+
+        @page {
+            margin: 0cm;
+        }
+
+        p {
+            font-size: 18px;
+            padding: 3px;
+        }
+      
+    </style>
+    <script language="javascript">
+
+	     function PrintContent(el)
+          {
+		    if(getInternetExplorerVersion()!==-1)
+		     {
+			 //	alert(2);
+		      var browserStub = '<OBJECT ID="webBrowser" WIDTH=0 HEIGHT=0 CLASSID="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2"></OBJECT>';
+			  document.body.insertAdjacentHTML('beforeEnd', browserStub);
+			  webBrowser.ExecWB(7, 1);
+			 webBrowser.outerHTML = '';
+			// window.close();
+	         }
+		  else
+		     {
+			 //	alert(1);
+		      var restorepadge = document.body.innerHTML;
+              var printcontent = document.getElementById(el).innerHTML;
+              document.body.innerHTML = printcontent;
+              window.print();
+              document.body.innerHTML = restorepadge;
+		     }
+		  }
+
+                            function getInternetExplorerVersion()
+                            {
+
+                                var rv = -1;
+                                if (navigator.appName == 'Microsoft Internet Explorer')
+                                {
+                                    var ua = navigator.userAgent;
+                                    var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+                                    if (re.exec(ua) != null)
+                                        rv = parseFloat( RegExp.$1 );
+                                }
+                                else if (navigator.appName == 'Netscape')
+                                {
+                                    var ua = navigator.userAgent;
+                                    var re  = new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})");
+                                    if (re.exec(ua) != null)
+                                        rv = parseFloat( RegExp.$1 );
+                                }
+                                return rv;
+                            }
+
+    </script>
+
+
+</head>
+<body style="margin:0;">
+    <div>
+        <table style="width:100%;">
+            <tbody>
+                <tr>
+                    <td>
+                        <table class="noprint" style="width:70%; border-width:medium; padding-left:95px;">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p style="font-size:x-small;">
+                                            Прежде чем отправлять документ на печать, воспользуйтесь предварительным просмотром (англ. <i>Print preview</i>) и убедитесь<br>
+                                            в корректном отображении документа.<br>
+                                            <b>Данный документ не является бухгалтерским документом и представляется для ознакомления.</b>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id="Button1" type="button" onclick="PrintContent('content')" value="Напечатать" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom:dotted; ">
+                                        <p style="font-size:x-small; vertical-align:text-bottom; margin-bottom:0; text-align:center;">
+                                            информационный облок от начала страницы до пунктирной линии на печать не выводится
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="content">
+        <table style="margin-left:85px; width:85%; margin-top:45px;">
+            <tbody>
+                <tr>
+                    <td><p style="font-size:30px; font-weight:bolder;">АКТ СВЕРКИ ВЗАИМНЫХ РАСЧЁТОВ</p></td>
+                </tr>
+                <tr>
+                    <td><p style="font-size:x-large; margin:5px; font-weight:bolder;"> за период с {DATE_CHECK1} по {DATE_CHECK2}</p></td>
+                </tr>
+                <tr>
+                    <td><p style="font-size:large; margin:5px;">ООО "Байт-Транзит-Континент" и {NAMeSHIPPER}</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <table border=1 CELLSPACING=0 CELLPADDING=2 bordercolor="black" style="margin-left:85px; width:80%; margin-top:5px; border-width:thin;">
+            <tbody>
+                  <tr>
+                    <td width="33%" height="30px" rowspan="2"><p>Документ, дата</p></td>
+                    <td width="33%" colspan="2"><p>OOO "Байт-Транзит-Континент"<br/>ИНН/КПП 5407124986/540601001</p></td>
+                    <td width="33%" colspan="2"><p>{NAMeSHIPPER}<br/>ИНН/КПП {INN_KPP_SHIPPER} </p></td>
+
+                 </tr>
+                <tr>
+                    <td>Дебет</td>
+                    <td>Кредит</td>
+                    <td>Дебет</td>
+                    <td>Кредит</td>
+                </tr>
+                {ROWS}
+                <tr>
+                    <td width="300px;">Итого оборотов за период:</td>
+                    <td width="80px">{SUM_COL2}</td>
+                    <td width="80px">{SUM_COL3}</td>
+                    <td width="80px"></td>
+                    <td width="80px"></td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table style="margin-left:85px; width:80%; margin-top:10px; text-align:right;">
+            <tbody>
+                <tr>
+                    <td><p style="font-size:large; margin:5px; font-weight:bolder; text-align:left;">Сальдо на {DATE_CHECK2}: {SUM_DIFFERENCE} руб.</p></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

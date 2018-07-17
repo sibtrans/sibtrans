@@ -1,0 +1,216 @@
+
+
+.cities_filter {
+  column-count: 6;
+  margin-bottom: 15px;
+}
+.next:hover {
+  cursor: pointer;
+  color: brown;
+}
+
+
+
+
+
+
+.cat_filter:hover {
+  background: #f2f2f2;
+  cursor:pointer;
+  color: black;
+}
+/*li:hover {
+  /*background: brown;*/
+/*cursor:pointer;*/
+/*color: white;*/
+/*}*/
+
+
+.item_detail {
+
+  padding:10px;
+  margin:0 0 10px;
+}
+
+.item_detail:hover {
+  background: whitesmoke;
+  cursor:pointer;
+  color: black;
+}
+
+.vac_text{
+  line-height: 1.5
+}
+
+.cat_filter {
+padding-top: 5px;
+
+}
+div[city_name=siti_fl] {
+  margin-left: 40px;
+  padding-top: 20px;
+}
+
+div[name=vac_item] {
+  
+  padding-left: 10px; 
+}
+
+div[name=vac_item]:hover {
+  background: #f2f2f2;
+  color: black;
+
+  cursor: pointer;
+
+}
+
+.vakansii{
+  text-align:left;
+  font-family: 'Segoe UI', serif;
+  font-weight:600;
+  color:brown; font-size:xx-large;
+  margin-bottom:7px;
+
+}
+
+.line-grad1 {
+  width: auto;
+}
+
+
+.line-grad {
+
+  margin-left: -53px;
+}
+#bx_incl_area_4_3{
+  display: none;
+}
+#right_cat {
+  top:25px;
+  line-height: 1.5;
+  width: 270px;  height: auto; /* Размеры */
+  background: #fff; /* Цвет фона */
+  outline: 1px solid #9a9a9a; /* Чёрная рамка */
+  border: 3px solid #fff; /* Белая рамка */
+  border-radius: 10px; /* Радиус скругления */
+}
+
+
+
+.vac_prop {
+  width: 130px;
+    position: relative;
+  top: 49px;
+  color: brown;
+  font-size: smaller;
+}
+
+p[name = city] {
+  position: relative;
+
+  top: -1.35em;
+  left: 11%;
+  color: brown;
+  font-size: smaller;
+  width: 220px;
+}
+
+.vac_img{
+  position: relative;
+  left: -5%;
+  bottom: 31px;
+}
+
+p[name = category] {
+  bottom: 21px;
+  left: 27%;
+  display: none;
+
+
+  color: brown;
+  position: relative;
+  font-size: smaller;
+  width: 300px;
+}
+
+p[name = salary] {
+  position: relative;
+  left: 78%;
+  bottom: 72px;
+  width: 300px;
+  font-size: larger;
+}
+
+.vac_prop2 {
+  width: 600px;
+  
+  font-size: x-large;
+  position: relative;
+
+}
+
+
+.nc:hover {
+ cursor:pointer;
+  color: brown;
+  text-decoration: underline;
+}
+
+.num_city:hover {
+  
+  cursor:pointer;
+  color: brown;
+  
+}
+
+.all_cities:hover {
+  color: brown;
+  text-decoration: underline;
+}
+
+.vac_text {
+  background-color: #f2f2f2;
+}
+
+.vac_p {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.nashi {
+  font-family: 'Segoe UI', serif;
+  font-weight:600;
+  color:brown; font-size:larger;
+  font-style: italic;
+}
+
+a {
+ font-family: 'Segoe UI', serif;
+ 
+}
+
+p {
+  font-family: 'Segoe UI', serif;
+}
+
+body {
+  line-height: 1px;
+}
+
+.link {
+  position: relative;
+  top: -10px;
+}
+
+p {
+  font-family: 'Segoe UI', serif;
+}
+
+span {
+  font-family: 'Segoe UI', serif;
+}
+
+.phone {
+  position: relative;
+  top: -7px;
+}

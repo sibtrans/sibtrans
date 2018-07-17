@@ -1,0 +1,732 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8">
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+	 @media print {
+            .noprint {
+                display: none !important;
+            }
+        }
+		* {
+			font-size:14px;
+		}
+		@page {
+            margin: 0cm;
+        }
+	
+body { background: #ffffff; font-family: Arial; font-size: 8pt; font-style: normal; }
+tr.R0{ height: 21px; }
+tr.R0 td.R0C8{ font-family: @Meiryo; font-size: 12pt; font-style: normal; font-weight: bold; color: #858585; text-align: right; }
+tr.R0 td.R1C3{ font-family: Arial; font-size: 12pt; font-style: normal; }
+tr.R0 td.R24C1{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: left; vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R0 td.R25C1{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: left; vertical-align: top; border-left: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R0 td.R27C1{ font-family: Arial; font-size: 6pt; font-style: normal; border-left: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R0 td.R2C3{ font-family: Arial; font-size: 12pt; font-style: normal; font-weight: bold; }
+tr.R0 td.R42C1{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; text-align: left; border-left: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R0 td.R42C6{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; border-left: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R10{ height: 10px; }
+tr.R13{ height: 17px; }
+tr.R13 td.R13C1{ font-family: Arial; font-size: 10pt; font-style: normal; font-weight: bold; text-align: center; }
+tr.R13 td.R53C1{ font-family: Arial; font-size: 10pt; font-style: normal; font-weight: bold; text-align: left; border-left: #000000 1px solid; border-top: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R20{ height: 29px; }
+tr.R20 td.R20C2{ text-align: left; vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R20 td.R20C4{ text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R3{ height: 15px; }
+tr.R3 td.R11C1{ border-left: #000000 1px solid; border-top: #000000 1px solid; }
+tr.R3 td.R11C6{ border-top: #000000 1px solid; }
+tr.R3 td.R11C8{ border-top: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R3 td.R12C1{ border-left: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R3 td.R14C1{ font-family: Arial; font-size: 10pt; font-style: normal; text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; }
+tr.R3 td.R14C4{ font-family: Arial; font-size: 10pt; font-style: normal; text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R3 td.R14C5{ font-family: Arial; font-size: 8pt; font-style: normal; text-align: center; border-top: #000000 1px solid; }
+tr.R3 td.R14C6{ font-family: Arial; font-size: 8pt; font-style: normal; text-align: center; border-left: #000000 1px solid; border-top: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R3 td.R14C7{ text-align: center; border-top: #000000 1px solid; }
+tr.R3 td.R14C8{ text-align: center; border-left: #000000 1px solid; border-top: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R3 td.R14C9{ text-align: center; border-top: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R3 td.R15C5{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; border-bottom: #000000 1px solid; }
+tr.R3 td.R15C6{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; border-left: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R3 td.R15C9{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R3 td.R16C1{ border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R3 td.R16C4{ text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; }
+tr.R3 td.R16C5{ text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R3 td.R16C9{ text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; background-image: url('zayvka_files/image000.png'); }
+tr.R3 td.R17C1{ font-family: Arial; font-size: 10pt; font-style: normal; text-align: center; vertical-align: medium; overflow: hidden;border-left: #000000 1px solid; border-top: #000000 1px solid; }
+tr.R3 td.R17C2{ text-align: left; vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R3 td.R26C1{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: left; vertical-align: top; border-left: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R3 td.R28C1{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; border-left: #000000 1px solid; border-top: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R3 td.R29C1{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; border-left: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R3 td.R30C1{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; border-left: #000000 1px solid; }
+tr.R3 td.R30C3{ overflow: visible;border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R3 td.R30C4{ overflow: visible;}
+tr.R3 td.R30C5{ font-family: Arial; font-size: 8pt; font-style: normal; text-align: right; border-bottom: #000000 1px solid; border-right: #ffffff 1px none; }
+tr.R3 td.R35C2{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; text-align: center; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R3 td.R35C3{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; }
+tr.R3 td.R35C9{ border-right: #ffffff 1px none; }
+tr.R3 td.R37C1{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; text-align: center; }
+tr.R3 td.R38C1{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; text-align: left; }
+tr.R3 td.R39C1{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; text-align: center; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px dotted; border-right: #000000 1px solid; }
+tr.R3 td.R3C3{ font-family: Arial; font-size: 7pt; font-style: normal; font-weight: bold; vertical-align: top; }
+tr.R3 td.R40C1{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; text-align: left; vertical-align: top; border-left: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R3 td.R52C1{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; vertical-align: top; }
+tr.R3 td.R55C1{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: left; vertical-align: top; border-left: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R3 td.R58C1{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: left; vertical-align: top; border-left: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R3 td.R6C1{ border-left: #000000 1px solid; border-top: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R3 td.R7C1{ border-left: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R3 td.R8C1{ border-left: #000000 1px solid; }
+tr.R3 td.R8C4{ border-right: #000000 1px solid; }
+tr.R3 td.R9C1{ font-family: Arial; font-size: 6pt; font-style: normal; border-left: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R34{ height: 1px; }
+tr.R34 td.R34C1{ border-left: #000000 1px solid; border-top: #000000 1px solid; }
+tr.R34 td.R34C2{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; border-top: #000000 1px solid; }
+tr.R34 td.R34C9{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; border-top: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R36{ height: 2px; }
+tr.R36 td.R36C1{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; text-align: center; border-left: #000000 1px solid; border-bottom: #000000 1px solid; }
+tr.R36 td.R36C2{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; text-align: center; border-bottom: #000000 1px solid; }
+tr.R36 td.R36C3{ border-bottom: #000000 1px solid; }
+tr.R36 td.R36C9{ border-bottom: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R43{ height: 26px; }
+tr.R43 td.R43C1{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; text-align: left; border-left: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R43 td.R43C6{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; border-left: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R45{ height: 22px; }
+tr.R45 td.R45C1{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; text-align: left; border-left: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R45 td.R45C6{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; border-left: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R45 td.R46C1{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; text-align: left; }
+tr.R47{ height: 20px; }
+tr.R47 td.R47C1{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; text-align: center; }
+tr.R47 td.R54C1{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; text-align: left; border-left: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R48{ height: 3px; }
+tr.R48 td.R48C1{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; text-align: center; }
+tr.R49{ height: 18px; }
+tr.R49 td.R49C1{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; text-align: center; }
+tr.R49 td.R49C3{ border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }
+tr.R51{ height: 27px; }
+tr.R51 td.R51C1{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; text-align: center; }
+table {table-layout: fixed; padding: 0px; padding-left: 2px; vertical-align:bottom; border-collapse:collapse;width: 100%; font-family: Arial; font-size: 8pt; font-style: normal; }
+td { padding: 0px; padding-left: 2px; overflow:hidden; }
+	.print_block {
+		padding-left: 95px;
+		padding-top: 10px;
+	}
+	.print_block b {line-height:30px;}
+	.print_block #Button1 {margin: 10px 0 15px 0;}
+	.logo_img {
+		position: absolute;
+    	margin-top: -30px;
+	}
+	.logo_img img {width: 110px;}
+	.DOP_WIDTH_TD {
+		overflow: initial;
+	}
+	.DOP_WIDTH_TD span {
+		display: block;
+    	position: absolute;
+    	margin-top: -7px;
+	}
+</STYLE>
+    <script language="javascript">
+
+	     function PrintContent(el)
+          {
+		    if(getInternetExplorerVersion()!==-1)
+		     {
+			 //	alert(2);
+		      var browserStub = '<OBJECT ID="webBrowser" WIDTH=0 HEIGHT=0 CLASSID="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2"></OBJECT>';
+			  document.body.insertAdjacentHTML('beforeEnd', browserStub);
+			  webBrowser.ExecWB(7, 1);
+			 webBrowser.outerHTML = '';
+			// window.close();
+	         }
+		  else
+		     {
+			 //	alert(1);
+		      var restorepadge = document.body.innerHTML;
+              var printcontent = document.getElementById(el).innerHTML;
+              document.body.innerHTML = printcontent;
+              window.print();
+              document.body.innerHTML = restorepadge;
+		     }
+		  }
+
+                            function getInternetExplorerVersion()
+                            {
+
+                                var rv = -1;
+                                if (navigator.appName == 'Microsoft Internet Explorer')
+                                {
+                                    var ua = navigator.userAgent;
+                                    var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+                                    if (re.exec(ua) != null)
+                                        rv = parseFloat( RegExp.$1 );
+                                }
+                                else if (navigator.appName == 'Netscape')
+                                {
+                                    var ua = navigator.userAgent;
+                                    var re  = new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})");
+                                    if (re.exec(ua) != null)
+                                        rv = parseFloat( RegExp.$1 );
+                                }
+                                return rv;
+                            }
+
+    </script>
+	
+</HEAD>
+<BODY STYLE="background: #ffffff; margin: 0; font-family: Arial; font-size: 8pt; font-style: normal; ">
+	<div class="print_block">
+        <table style="width:100%;">
+            <tbody>
+                <tr>
+                    <td>
+                        <table class="noprint" style="width:70%; border-width:medium; padding-left:95px;">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p style="font-size:x-small;">
+                                            Прежде чем отправлять документ на печать, воспользуйтесь предварительным просмотром (англ. <i>Print preview</i>) и убедитесь<br>
+                                            в корректном отображении документа.<br>
+                                            <b>Данный документ не является бухгалтерским документом и представляется для ознакомления.</b>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id="Button1" type="button" onclick="PrintContent('content')" value="Напечатать" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border-bottom:dotted; ">
+                                        <p style="font-size:x-small; vertical-align:text-bottom; margin-bottom:0; text-align:center;">
+                                            информационный облок от начала страницы до пунктирной линии на печать не выводится
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div id="content">	
+<TABLE style="width:100%; height:0px; " CELLSPACING=0>
+<COL WIDTH=14>
+<COL WIDTH=20>
+<COL WIDTH=97>
+<COL WIDTH=108>
+<COL WIDTH=74>
+<COL WIDTH=75>
+<COL WIDTH=91>
+<COL WIDTH=88>
+<COL WIDTH=94>
+<COL WIDTH=91>
+<TR CLASS=R0>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R0C8" COLSPAN=2><SPAN STYLE="white-space:nowrap;max-width:0px;">WWW.SIBTRANS.RU</SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R0>
+<TD><SPAN></SPAN></TD>
+<TD COLSPAN=2><SPAN></SPAN></TD>
+<TD CLASS="R1C3"><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD COLSPAN=2><SPAN></SPAN></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR CLASS=R0>
+<TD><SPAN></SPAN></TD>
+<TD COLSPAN=2><SPAN><div class="logo_img"><img src="/bitrix/templates/main/images/logo_for_print_1000.png" /></div></SPAN></TD>
+<TD CLASS="R2C3" COLSPAN=4><SPAN STYLE="white-space:nowrap;max-width:0px; margin-left:20px">Заявка&nbsp;на&nbsp;перевозку&nbsp;груза&nbsp;№&nbsp;{doc_num}</SPAN></TD>
+  <TD CLASS="R2C3" COLSPAN=4><SPAN STYLE="white-space:nowrap;max-width:0px; margin-left:20px"></SPAN></TD>
+</TR>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD COLSPAN=2><SPAN></SPAN></TD>
+<TD CLASS="R3C3" COLSPAN=8><SPAN STYLE="white-space:nowrap;max-width:0px; margin-left:20px">Телефоны:&nbsp;(383)241-06-08,&nbsp;241-06-07,&nbsp;241-06-42</SPAN></TD>
+</TR>
+<TR CLASS=R0>
+<TD><SPAN></SPAN></TD>
+<TD COLSPAN=2><SPAN></SPAN></TD>
+<TD CLASS="R2C3" COLSPAN=5><SPAN STYLE="white-space:nowrap;max-width:0px; margin-left:20px">Тариф:&nbsp;{tarif}</SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD COLSPAN=2><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R6C1" COLSPAN=5><SPAN STYLE="white-space:nowrap;max-width:0px;">Пункт&nbsp;отправления:&nbsp;{departure}</SPAN></TD>
+<TD CLASS="R6C1" COLSPAN=4><SPAN STYLE="white-space:nowrap;max-width:0px;">Пункт&nbsp;назначения:{destination}</SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R7C1" COLSPAN=5><SPAN STYLE="white-space:nowrap;max-width:0px;">Грузоотправитель:{short_Name1}</SPAN></TD>
+<TD CLASS="R7C1" COLSPAN=4><SPAN STYLE="white-space:nowrap;max-width:0px;">Грузополучатель:"{short_Name2}"</SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R8C1" COLSPAN=3><SPAN STYLE="white-space:nowrap;max-width:0px;">ИНН:{inn1}</SPAN></TD>
+<TD CLASS="R8C4" COLSPAN=2><SPAN STYLE="white-space:nowrap;max-width:0px;">Тел.:&nbsp;{phone_1}</SPAN></TD>
+<TD CLASS="R8C1" COLSPAN=2><SPAN STYLE="white-space:nowrap;max-width:0px;">ИНН:{inn2}</SPAN></TD>
+<TD CLASS="R8C4" COLSPAN=2><SPAN STYLE="white-space:nowrap;max-width:0px;">Тел.:&nbsp;{phone_2}</SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R9C1" COLSPAN=5><SPAN>Адрес:&nbsp;{address1}</SPAN></TD>
+<TD CLASS="R9C1" COLSPAN=4><SPAN>Адрес:&nbsp;{address2}</SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R10>
+<TD><DIV STYLE="position:relative; height:10px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD COLSPAN=2><DIV STYLE="position:relative; height:10px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="position:relative; height:10px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="position:relative; height:10px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="position:relative; height:10px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="position:relative; height:10px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="position:relative; height:10px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="position:relative; height:10px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="position:relative; height:10px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="width:100%;height:10px;overflow:hidden;">&nbsp;</DIV></TD>
+</TR>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R11C1" COLSPAN=5><SPAN STYLE="white-space:nowrap;max-width:0px;">Плательщик:{short_Name3}</SPAN></TD>
+<TD CLASS="R11C6" COLSPAN=2><SPAN STYLE="white-space:nowrap;max-width:0px;">ИНН:&nbsp;{inn3}</SPAN></TD>
+<TD CLASS="R11C8" COLSPAN=2><SPAN STYLE="white-space:nowrap;max-width:0px;">Тел.:&nbsp;{phone_3}</SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R12C1" COLSPAN=9><SPAN STYLE="white-space:nowrap;max-width:0px;">Адрес:&nbsp;{address3}</SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R13>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R13C1" COLSPAN=9><SPAN STYLE="white-space:nowrap;max-width:0px;">Характеристики&nbsp;груза</SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R3>
+<TD ROWSPAN=2><SPAN></SPAN></TD>
+<TD CLASS="R14C1" COLSPAN=3 ROWSPAN=2><DIV STYLE="width:100%;height:29px;overflow:hidden;"><SPAN STYLE="white-space:nowrap;max-width:0px;">Наименование</SPAN></DIV></TD>
+<TD CLASS="R14C4" ROWSPAN=2><DIV STYLE="width:100%;height:29px;overflow:hidden;"><SPAN STYLE="white-space:nowrap;max-width:0px;">Мест</SPAN></DIV></TD>
+<TD CLASS="R14C5"><SPAN STYLE="white-space:nowrap;max-width:0px;">Вес(кг)</SPAN></TD>
+<TD CLASS="R14C6"><SPAN STYLE="white-space:nowrap;max-width:0px;">Вес(кг)</SPAN></TD>
+<TD CLASS="R14C7"><SPAN STYLE="white-space:nowrap;max-width:0px;">Объем(м3)</SPAN></TD>
+<TD CLASS="R14C8"><SPAN STYLE="white-space:nowrap;max-width:0px;">Объем(м3)</SPAN></TD>
+<TD CLASS="R14C9"><SPAN STYLE="white-space:nowrap;max-width:0px;">Отказ&nbsp;клиента</SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R3>
+<TD CLASS="R15C5"><SPAN STYLE="white-space:nowrap;max-width:0px;">заявленый</SPAN></TD>
+<TD CLASS="R15C6"><SPAN STYLE="white-space:nowrap;max-width:0px;">фактический</SPAN></TD>
+<TD CLASS="R15C5"><SPAN STYLE="white-space:nowrap;max-width:0px;">заявленый</SPAN></TD>
+<TD CLASS="R15C6"><SPAN STYLE="white-space:nowrap;max-width:0px;">фактический</SPAN></TD>
+<TD CLASS="R15C9"><SPAN STYLE="white-space:nowrap;max-width:0px;">от&nbsp;сервисной&nbsp;услуги</SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R16C1" COLSPAN=3><SPAN>{character}</SPAN></TD>
+<TD CLASS="R16C4"><SPAN>{places}</SPAN></TD>
+<TD CLASS="R16C5"><SPAN STYLE="white-space:nowrap;max-width:0px;">{weight}</SPAN></TD>
+<TD CLASS="R16C5"><SPAN></SPAN></TD>
+<TD CLASS="R16C5"><SPAN STYLE="white-space:nowrap;max-width:0px;">{amount}</SPAN></TD>
+<TD CLASS="R16C5"><SPAN></SPAN></TD>
+<TD CLASS="R16C9" ROWSPAN=2 STYLE=" background-position: left 3px top 3px;"><SPAN></SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R3>
+<TD ROWSPAN={colservices}><SPAN></SPAN></TD>
+<TD CLASS="R17C1" ROWSPAN={colservices} STYLE="height:{spec_height}"><div style="margin: 0 -74px;-moz-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); -o-transform: rotate(-90deg); -ms-transform: rotate(-90deg); transform: rotate(-90deg)"><SPAN STYLE="max-width:0px;">В&nbsp;том&nbsp;числе</SPAN></TD>
+<TD CLASS="R17C2" COLSPAN=2>Негабарит</TD>
+<TD CLASS="R16C5"><SPAN>{places1}</SPAN></TD>
+<TD CLASS="R16C5"><SPAN>{weight1}</SPAN></TD>
+<TD CLASS="R16C5"><SPAN></SPAN></TD>
+<TD CLASS="R16C5"><SPAN>{amount1}</SPAN></TD>
+<TD CLASS="R16C5"><SPAN></SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R3>
+<TD CLASS="R17C2" COLSPAN=2>Тепловой</TD>
+<TD CLASS="R16C5"><SPAN>{places2}</SPAN></TD>
+<TD CLASS="R16C5"><SPAN>{weight2}</SPAN></TD>
+<TD CLASS="R16C5"><SPAN></SPAN></TD>
+<TD CLASS="R16C5"><SPAN>{amount2}</SPAN></TD>
+<TD CLASS="R16C5"><SPAN></SPAN></TD>
+<TD CLASS="R16C5"><SPAN></SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R3>
+<TD CLASS="R17C2" COLSPAN=2>Хрупкий</TD>
+<TD CLASS="R16C5"><SPAN>{places3}</SPAN></TD>
+<TD CLASS="R16C5"><SPAN>{weight3}</SPAN></TD>
+<TD CLASS="R16C5"><SPAN></SPAN></TD>
+<TD CLASS="R16C5"><SPAN>{amount3}</SPAN></TD>
+<TD CLASS="R16C5"><SPAN></SPAN></TD>
+<TD CLASS="R16C5"><SPAN></SPAN></TD>
+<TD></TD>
+</TR>
+{insert_ervices_dop}
+<TR CLASS=R0>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R24C1" COLSPAN=9>       Предоставление груза для перевозки признается акцептом Договора публичной оферты на оказание услуг по транспортировке груза, размещенного на сайте www.sibtrans.ru в свободном доступе (п.3 ст.438 ГКРФ). Условия известны и приняты без замечаний и разногласий.</TD>
+<TD></TD>
+</TR>
+<TR CLASS=R0>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R25C1" COLSPAN=9>       Отправитель с количеством, объемом, весом, размещением груза согласен, с правилами перевозки ознакомлен, гарантирует, что груз не содержит недопустимых вложений, предусмотренных законодательством РФ, и свободен от таможенных платежей, подтверждает, что данные грузоотправителя и грузополучателя указаны верно.</TD>
+<TD></TD>
+</TR>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R26C1" COLSPAN=9>        При повреждениях, в случае несоответствия упаковки груза транспортному законодательству РФ, перевозчик освобождается от ответственности за состояние и количество вложений.</TD>
+<TD></TD>
+</TR>
+<TR CLASS=R0>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R27C1" COLSPAN=9>        В случае, если указанное грузоотправителем в качестве плательщика лицо, не произведет ООО "БТК" оплату оказанных по данной транспортной накладной услуг, то грузоотправитель обязуется самостоятельно оплатить услуги ООО "БТК"</TD>
+<TD></TD>
+</TR>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R28C1" COLSPAN=9><SPAN STYLE="white-space:nowrap;max-width:0px;">Сопроводительный&nbsp;документ&nbsp;№&nbsp;</SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R29C1" COLSPAN=9><SPAN STYLE="white-space:nowrap;max-width:0px;">Стоимость&nbsp;груза:</SPAN></TD>
+<TD></TD>
+</TR>
+</TABLE>
+<TABLE style="width:100%; height:0px; " CELLSPACING=0>
+<COL WIDTH=14>
+<COL WIDTH=20>
+<COL WIDTH=82>
+<COL WIDTH=28>
+<COL WIDTH=109>
+<COL WIDTH=52>
+<COL WIDTH=12>
+<COL WIDTH=28>
+<COL WIDTH=109>
+<COL WIDTH=52>
+<COL WIDTH=12>
+<COL WIDTH=28>
+<COL WIDTH=109>
+<COL WIDTH=52>
+<COL WIDTH=12>
+<COL WIDTH=19>
+<COL>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R30C1 DOP_WIDTH_TD" COLSPAN=2><SPAN STYLE="white-space:nowrap;max-width:0px;">Состояние<br />груза:</SPAN></TD>
+<TD CLASS="R30C3"><SPAN></SPAN></TD>
+<TD CLASS="R30C4"><SPAN STYLE="white-space:nowrap;max-width:0px;">Груз&nbsp;опломбирован</SPAN></TD>
+<TD CLASS="R30C5"><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R30C3"><SPAN></SPAN></TD>
+<TD CLASS="R30C4"><SPAN STYLE="white-space:nowrap;max-width:0px;">Доступ&nbsp;к&nbsp;вложению</SPAN></TD>
+<TD CLASS="R30C5"><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R30C3"><SPAN></SPAN></TD>
+<TD CLASS="R30C4"><SPAN STYLE="white-space:nowrap;max-width:0px;">Звон&nbsp;внутри&nbsp;упаковки</SPAN></TD>
+<TD CLASS="R30C5"><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R8C4"><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R30C1" COLSPAN=2><SPAN></SPAN></TD>
+<TD CLASS="R30C3"><SPAN></SPAN></TD>
+<TD CLASS="R30C4"><SPAN STYLE="white-space:nowrap;max-width:0px;">Мокрая&nbsp;упаковка</SPAN></TD>
+<TD CLASS="R30C5"><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R30C3"><SPAN></SPAN></TD>
+<TD CLASS="R30C4"><SPAN STYLE="white-space:nowrap;max-width:0px;">Отказ&nbsp;от&nbsp;обрешетки</SPAN></TD>
+<TD CLASS="R30C5"><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R30C3"><SPAN></SPAN></TD>
+<TD CLASS="R30C4"><SPAN STYLE="white-space:nowrap;max-width:0px;">Отказ&nbsp;от&nbsp;тепла</SPAN></TD>
+<TD CLASS="R30C5"><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R8C4"><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R30C1" COLSPAN=2><SPAN></SPAN></TD>
+<TD CLASS="R30C3"><SPAN></SPAN></TD>
+<TD CLASS="R30C4"><SPAN STYLE="white-space:nowrap;max-width:0px;">Отказ&nbsp;от&nbsp;хрупкого</SPAN></TD>
+<TD CLASS="R30C5"><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R30C3"><SPAN></SPAN></TD>
+<TD CLASS="R30C4"><SPAN STYLE="white-space:nowrap;max-width:0px;">Скотч&nbsp;(Хар-ка)</SPAN></TD>
+<TD CLASS="R30C5"><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R30C3"><SPAN></SPAN></TD>
+<TD CLASS="R30C4"><SPAN STYLE="white-space:nowrap;max-width:0px;">Слабая&nbsp;упаковка</SPAN></TD>
+<TD CLASS="R30C5"><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R8C4"><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R30C1" COLSPAN=2><SPAN></SPAN></TD>
+<TD CLASS="R30C3"><SPAN></SPAN></TD>
+<TD CLASS="R30C4"><SPAN STYLE="white-space:nowrap;max-width:0px;">Упаковка&nbsp;нарушена</SPAN></TD>
+<TD CLASS="R30C5"><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R8C4"><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD></TD>
+</TR>
+</TABLE>
+<TABLE style="width:100%; height:0px; " CELLSPACING=0>
+<COL WIDTH=14>
+<COL WIDTH=20>
+<COL WIDTH=97>
+<COL WIDTH=108>
+<COL WIDTH=74>
+<COL WIDTH=75>
+<COL WIDTH=91>
+<COL WIDTH=88>
+<COL WIDTH=94>
+<COL WIDTH=91>
+<TR CLASS=R34>
+<TD><DIV STYLE="position:relative; height:1px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD CLASS="R34C1"><DIV STYLE="position:relative; height:1px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD CLASS="R34C2" COLSPAN=8 STYLE="border-right: #333333 1px solid; "><DIV STYLE="position:relative; height:1px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="width:100%;height:1px;overflow:hidden;">&nbsp;</DIV></TD>
+</TR>
+</TABLE>
+<TABLE style="width:100%; height:0px; " CELLSPACING=0>
+<COL WIDTH=14>
+<COL WIDTH=20>
+<COL WIDTH=17>
+<COL WIDTH=107>
+<COL WIDTH=75>
+<COL WIDTH=74>
+<COL WIDTH=91>
+<COL WIDTH=89>
+<COL WIDTH=93>
+<COL WIDTH=91>
+<COL WIDTH=63>
+<COL WIDTH=17>
+<COL>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R8C1"><SPAN></SPAN></TD>
+<TD CLASS="R35C2"><SPAN></SPAN></TD>
+<TD CLASS="R35C3" COLSPAN=9 STYLE="border-right: #333333 1px solid; "><SPAN STYLE="white-space:nowrap;max-width:0px;">&nbsp;несоответствие&nbsp;упаковки&nbsp;требованиям&nbsp;договора&nbsp;оказания&nbsp;услуг</SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD></TD>
+</TR>
+</TABLE>
+<TABLE style="width:100%; height:0px; " CELLSPACING=0>
+<COL WIDTH=14>
+<COL WIDTH=20>
+<COL WIDTH=97>
+<COL WIDTH=108>
+<COL WIDTH=74>
+<COL WIDTH=75>
+<COL WIDTH=91>
+<COL WIDTH=88>
+<COL WIDTH=94>
+<COL WIDTH=91>
+<TR CLASS=R36>
+<TD><DIV STYLE="position:relative; height:2px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD CLASS="R36C1"><DIV STYLE="position:relative; height:2px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD CLASS="R36C2"><DIV STYLE="position:relative; height:2px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD CLASS="R36C3"><DIV STYLE="position:relative; height:2px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD CLASS="R36C3"><DIV STYLE="position:relative; height:2px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD CLASS="R36C3"><DIV STYLE="position:relative; height:2px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD CLASS="R36C3"><DIV STYLE="position:relative; height:2px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD CLASS="R36C3"><DIV STYLE="position:relative; height:2px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD CLASS="R36C3"><DIV STYLE="position:relative; height:2px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD CLASS="R36C9"><DIV STYLE="position:relative; height:2px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="width:100%;height:2px;overflow:hidden;">&nbsp;</DIV></TD>
+</TR>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R37C1" COLSPAN=2><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R38C1" COLSPAN=9><SPAN STYLE="white-space:nowrap;max-width:0px;">Заявка&nbsp;на&nbsp;экспедирование&nbsp;(внутригородская&nbsp;перевозка),&nbsp;при&nbsp;необходимости</SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R39C1" COLSPAN=5><SPAN STYLE="white-space:nowrap;max-width:0px;">в&nbsp;пункте&nbsp;отправления</SPAN></TD>
+<TD CLASS="R39C1" COLSPAN=4><SPAN STYLE="white-space:nowrap;max-width:0px;">в&nbsp;пункте&nbsp;назначения</SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R40C1" COLSPAN=5 ROWSPAN=2><DIV STYLE="width:100%;margin-bottom:10px;margin-right: 10px;word-wrap:break-word">Адрес загрузки: {address4}</DIV></TD>
+<TD CLASS="R40C1" COLSPAN=4 ROWSPAN=2><DIV STYLE="width:100%;margin-bottom:10px;margin-right: 10px;word-wrap:break-word">Адрес выгрузки: {address5}</DIV></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD>&nbsp;</TD>
+</TR>
+<TR CLASS=R0>
+<TD><DIV STYLE="position:relative; height:21px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD CLASS="R42C1" COLSPAN=5><DIV STYLE="width:100%;height:21px;overflow:hidden;"><SPAN STYLE="white-space:nowrap;max-width:0px;">Контактное&nbsp;лицо: {fio4}&nbsp;</SPAN></TD>
+<TD CLASS="R42C6" COLSPAN=4><DIV STYLE="width:100%;height:21px;overflow:hidden;"><SPAN STYLE="white-space:nowrap;max-width:0px;">Контактное&nbsp;лицо: {fio5}&nbsp;</SPAN></TD>
+<TD><DIV STYLE="width:100%;height:21px;overflow:hidden;"></DIV></TD>
+</TR>
+<TR CLASS=R43>
+<TD><DIV STYLE="position:relative; height:26px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD CLASS="R43C1" COLSPAN=5><DIV STYLE="width:100%;height:26px;overflow:hidden;"><SPAN STYLE="white-space:nowrap;max-width:0px;">Телефон&nbsp;на&nbsp;погрузке: {phone_4}&nbsp;</SPAN></TD>
+<TD CLASS="R43C6" COLSPAN=4><DIV STYLE="width:100%;height:26px;overflow:hidden;"><SPAN STYLE="white-space:nowrap;max-width:0px;">Телефон&nbsp;на&nbsp;выгрузке: {phone_5}&nbsp;</SPAN></TD>
+<TD><DIV STYLE="width:100%;height:26px;overflow:hidden;"></DIV></TD>
+</TR>
+<TR CLASS=R0>
+<TD><DIV STYLE="position:relative; height:21px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD CLASS="R42C1" COLSPAN=5><DIV STYLE="width:100%;height:21px;overflow:hidden;"><SPAN STYLE="white-space:nowrap;max-width:0px;">Груз&nbsp;забрать: {data_expedition4}&nbsp;</SPAN></TD>
+<TD CLASS="R42C6" COLSPAN=4><DIV STYLE="width:100%;height:21px;overflow:hidden;"><SPAN STYLE="white-space:nowrap;max-width:0px;">Груз&nbsp;доставить: {data_expedition5}&nbsp;</SPAN></TD>
+<TD><DIV STYLE="width:100%;height:21px;overflow:hidden;"></DIV></TD>
+</TR>
+<TR CLASS=R45>
+<TD><DIV STYLE="position:relative; height:22px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD CLASS="R45C1" COLSPAN=5><DIV STYLE="width:100%;height:22px;overflow:hidden;"><SPAN STYLE="white-space:nowrap;max-width:0px;">Время:&nbsp;c&nbsp;&nbsp;до&nbsp;&nbsp;часов {time_expedition4}</SPAN></TD>
+<TD CLASS="R45C6" COLSPAN=4><DIV STYLE="width:100%;height:22px;overflow:hidden;"><SPAN STYLE="white-space:nowrap;max-width:0px;">Время:&nbsp;с&nbsp;&nbsp;до&nbsp;&nbsp;часов {time_expedition5}</SPAN></TD>
+<TD><DIV STYLE="width:100%;height:22px;overflow:hidden;"></DIV></TD>
+</TR>
+<TR CLASS=R45>
+<TD><DIV STYLE="position:relative; height:22px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD CLASS="R46C1" COLSPAN=9><DIV STYLE="width:100%;">Примечания: {doc_rezerve2} </TD>
+<TD><DIV STYLE="width:100%;height:22px;overflow:hidden;"></DIV></TD>
+</TR>
+<TR CLASS=R47>
+<TD><DIV STYLE="position:relative; height:20px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD CLASS="R47C1" COLSPAN=9><DIV STYLE="width:100%;height:20px;overflow:hidden;"><SPAN STYLE="white-space:nowrap;max-width:0px;">________________________________________________________________________________________________________________________</SPAN></TD>
+<TD><DIV STYLE="width:100%;height:20px;overflow:hidden;"></DIV></TD>
+</TR>
+<TR CLASS=R48>
+<TD><DIV STYLE="position:relative; height:3px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD CLASS="R48C1" COLSPAN=2><DIV STYLE="position:relative; height:3px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="position:relative; height:3px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="position:relative; height:3px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="position:relative; height:3px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="position:relative; height:3px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="position:relative; height:3px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="position:relative; height:3px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="position:relative; height:3px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="width:100%;height:3px;overflow:hidden;">&nbsp;</DIV></TD>
+</TR>
+<TR CLASS=R49>
+<TD><DIV STYLE="position:relative; height:18px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD CLASS="R49C1" COLSPAN=2 STYLE="overflow: inherit;"><DIV STYLE=""><SPAN STYLE="">Номер&nbsp;счета&nbsp;заказа:</SPAN></TD>
+<TD CLASS="R49C3" STYLE="margin-left: 40px;display: block;width: 100px;"><DIV STYLE="position:relative; height:18px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="position:relative; height:18px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="position:relative; height:18px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="position:relative; height:18px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="position:relative; height:18px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="position:relative; height:18px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="position:relative; height:18px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD><DIV STYLE="width:100%;height:18px;overflow:hidden;"></DIV></TD>
+</TR>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R38C1" COLSPAN=9><SPAN STYLE="white-space:nowrap;max-width:0px;">Заказчик&nbsp;с&nbsp;условиями&nbsp;перевозки&nbsp;согласен,&nbsp;с&nbsp;требованиями&nbsp;к&nbsp;упаковке&nbsp;груза&nbsp;и&nbsp;расценками&nbsp;прейскуранта&nbsp;ознакомлен</SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R51>
+<TD><DIV STYLE="position:relative; height:27px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD CLASS="R51C1" COLSPAN=9><DIV STYLE="width:100%;height:27px;overflow:hidden;"><SPAN STYLE="white-space:nowrap;max-width:0px;">Согласен_____________________________________________________</SPAN></TD>
+<TD><DIV STYLE="width:100%;height:27px;overflow:hidden;"></DIV></TD>
+</TR>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R52C1" COLSPAN=9><SPAN STYLE="white-space:nowrap;max-width:0px;">(подпись,&nbsp;ФИО&nbsp;представителя&nbsp;грузоотправителя)</SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R13>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R53C1" COLSPAN=9><SPAN STYLE="white-space:nowrap;max-width:0px;">Заявку&nbsp;составил&nbsp;(от&nbsp;заказчика/плательщика)</SPAN></TD>
+<TD></TD>
+</TR>
+
+<TR CLASS=R47>
+<TD><DIV STYLE="position:relative; height:20px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD CLASS="R54C1" COLSPAN=9><DIV STYLE="width:100%;height:20px;overflow:hidden;"><SPAN STYLE="white-space:nowrap;max-width:0px;">___________________________&nbsp;/&nbsp;_________________&nbsp;/&nbsp;_______________________________________________&nbsp;/&nbsp;8(______)_______-______&nbsp;-______</SPAN></TD>
+<TD><DIV STYLE="width:100%;height:20px;overflow:hidden;"></DIV></TD>
+</TR>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R55C1" COLSPAN=9><SPAN STYLE="white-space:nowrap;max-width:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(должность)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(подпись)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ф.И.О.&nbsp;разборчиво)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(контактный&nbsp;телефон)</SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R13>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R53C1" COLSPAN=9><SPAN STYLE="white-space:nowrap;max-width:0px;">Заявку&nbsp;составил&nbsp;(от&nbsp;исполнителя)</SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R47>
+<TD><DIV STYLE="position:relative; height:20px;width: 100%; overflow:hidden;"><SPAN></SPAN></DIV></TD>
+<TD CLASS="R54C1" COLSPAN=9><DIV STYLE="width:100%;height:20px;overflow:hidden;"><SPAN STYLE="white-space:nowrap;max-width:0px;">___________________________&nbsp;/&nbsp;_________________&nbsp;/&nbsp;_______________________________________________&nbsp;/&nbsp;8(______)_______-______&nbsp;-______</SPAN></TD>
+<TD><DIV STYLE="width:100%;height:20px;overflow:hidden;"></DIV></TD>
+</TR>
+<TR CLASS=R3>
+<TD><SPAN></SPAN></TD>
+<TD CLASS="R58C1" COLSPAN=9><SPAN STYLE="white-space:nowrap;max-width:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(должность)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(подпись)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ф.И.О.&nbsp;разборчиво)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(контактный&nbsp;телефон)</SPAN></TD>
+<TD></TD>
+</TR>
+<TR CLASS=R0>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+<TD><SPAN></SPAN></TD>
+	</div>
+  </HTML>

@@ -1,0 +1,17 @@
+<?
+$PERM["vakkk"]["G7"]="R";
+$PERM["vakkk"]["G3"]="R";
+$PERM["vakkk"]["G4"]="R";
+$PERM["vakkk"]["G5"]="R";
+$PERM["cost-calculation"]["6"]="R";
+$PERM["lc"]["2"]="D";
+$PERM["lc"]["3"]="D";
+$PERM["lc"]["4"]="D";
+$PERM["lc"]["7"]="R";
+$PERM["lc"]["6"]="W";
+$PERM["lc"]["5"]="R";
+$PERM["lc"]["*"]="D";
+$PERM["bitrix"]["6"]="R";
+$PERM["/"]["6"]="W";
+$PERM["/"]["*"]="R";
+?>

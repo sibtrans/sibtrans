@@ -1,0 +1,196 @@
+Options -Indexes 
+ErrorDocument 404 /404.php
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+
+
+
+<IfModule mod_php5.c>
+	php_flag allow_call_time_pass_reference 1
+	php_flag session.use_trans_sid off
+
+	#php_value display_errors 1
+
+	#php_value mbstring.internal_encoding UTF-8
+</IfModule>
+
+<IfModule mod_rewrite.c>
+
+	Options +FollowSymLinks
+	RewriteEngine On
+	Redirect 301 /cp/about_company/ /about/
+	Redirect 301 /cp/about_company/pro.html /about/proekty.php
+	Redirect 301 /cp/about_company/Istoriya.html /about/istoriya.php
+	Redirect 301 /cp/about_company/O-gruppe-kompaniy.html /about/o-gruppekompaniy.php
+	#Redirect 301 /cp/about_company/rukovoditeli.html 
+	Redirect 301 /cp/about_company/docti.html /about/dostizheniya.php
+	Redirect 301 /cp/about_company/blago.html /about/nagrady.php
+	Redirect 301 /cp/about_company/blagoo.html /about/blagotvoritelnost.php
+
+	Redirect 301 /services/sbornyye-gruzoperevozki/ /perevozka-sbornogo-gruza/
+	Redirect 301 /services/sbornyye-gruzoperevozki /perevozka-sbornogo-gruza/
+
+	Redirect 301 /services/zheleznodorozhnyye-gruzoperevozki/ /zheleznodorozhnye-perevozki/
+	Redirect 301 /services/zheleznodorozhnyye-gruzoperevozki /zheleznodorozhnye-perevozki/
+
+	Redirect 301 /services/avtomobilnyye-gruzoperevozki/ /avtoperevozki/
+	Redirect 301 /services/avtomobilnyye-gruzoperevozki /avtoperevozki/
+
+	Redirect 301 /services/konteynernyye-gruzoperevozki/ /konteynernye-perevozki/
+	Redirect 301 /services/konteynernyye-gruzoperevozki /konteynernye-perevozki/
+
+	Redirect 301 /services/transportnyy-terminal/ /uslugi/otvetstvennoe-khranenie.php
+	Redirect 301 /services/transportnyy-terminal /uslugi/otvetstvennoe-khranenie.php
+
+	Redirect 301 /services/perevozka-avtomobiley/ /perevozka-avtomobiley/
+	Redirect 301 /services/perevozka-avtomobiley /perevozka-avtomobiley/
+
+	Redirect 301 /services/ekspedirovaniye-gruza/ /ekspedirovanie-po-gorodu/
+	Redirect 301 /services/ekspedirovaniye-gruza /ekspedirovanie-po-gorodu/
+
+	Redirect 301 /services/proyektnyye-gruzoperevozki/ /perevozki-slozhnykh-i-negabaritnykh-gruzov/
+	Redirect 301 /services/proyektnyye-gruzoperevozki /perevozki-slozhnykh-i-negabaritnykh-gruzov/
+
+	Redirect 301 /services/aviaperevozki/ /aviaperevozki/
+	Redirect 301 /services/aviaperevozki /aviaperevozki/
+
+	Redirect 301 /services/perevozka-zerna/ /perevozka-zernovykh-kultur-nasypyu/
+	Redirect 301 /services/perevozka-zerna /perevozka-zernovykh-kultur-nasypyu/
+
+	Redirect 301 /services/morskiye-gruzoperevozki/ /morskie-perevozki/
+	Redirect 301 /services/morskiye-gruzoperevozki /morskie-perevozki/
+
+	Redirect 301 /services/gruzoperevozki-iz-kitaya/ /gruzoperevozki-iz-kitaya/
+	Redirect 301 /services/gruzoperevozki-iz-kitaya /gruzoperevozki-iz-kitaya/
+
+	Redirect 301 /services/tamozhennoye-oformleniye/ /tamozhennoe-oformlenie/
+	Redirect 301 /services/tamozhennoye-oformleniye /tamozhennoe-oformlenie/
+
+	Redirect 301 /services/uslugi-kontraktoderzhatelya/ /uslugi-kontraktoderzhatelya/
+	Redirect 301 /services/uslugi-kontraktoderzhatelya /uslugi-kontraktoderzhatelya/
+
+	Redirect 301 /services/sklad-vremennogo-khraneniya/ /tamozhennyy-sklad-vremennogo-khraneniya/
+	Redirect 301 /services/sklad-vremennogo-khraneniya /tamozhennyy-sklad-vremennogo-khraneniya/
+
+	Redirect 301 /services/ /uslugi/
+	Redirect 301 /services /uslugi/
+
+	Redirect 301 /tarifs/ /rates/
+	Redirect 301 /tarifs/tarify/ /rates/sbornye-avto-zhd-perevozki.php
+	Redirect 301 /tarifs/hranenie/ /rates/khranenie-gruza.php
+	Redirect 301 /tarifs/avia/ /rates/aviaperevozki.php
+	Redirect 301 /tarifs/tamozh/ /rates/tamozhennye-uslugi.php
+	Redirect 301 /tarifs/cklad2/ /rates/tamozhennyy-sklad-vremennogo-khraneniya.php
+	Redirect 301 /cp/documents/ /download/
+	Redirect 301 /cp/kontakt.html /maps/Russia.php
+
+	Redirect 301 /filials/Barnaul.1/?openContacts=0 /barnaul
+	Redirect 301 /filials/Barnaul.1/ /barnaul
+	Redirect 301 /filials/Barnaul.1 /barnaul
+
+	Redirect 301 /filials/Biysk.2/?openContacts=0 /biysk
+	Redirect 301 /filials/Biysk.2/ /biysk
+	Redirect 301 /filials/Biysk.2 /biysk
+
+	Redirect 301 /filials/Blagoveshchensk.3/?openContacts=0 /blagoveshchensk
+	Redirect 301 /filials/Blagoveshchensk.3/ /blagoveshchensk
+	Redirect 301 /filials/Blagoveshchensk.3 /blagoveshchensk
+
+	Redirect 301 /filials/Vladivostok.4/?openContacts=0 /vladivostok
+	Redirect 301 /filials/Vladivostok.4/ /vladivostok
+	Redirect 301 /filials/Vladivostok.4 /vladivostok
+
+	Redirect 301 /filials/Ekaterinburg.5/?openContacts=0 /yekaterinburg
+	Redirect 301 /filials/Ekaterinburg.5/ /yekaterinburg
+	Redirect 301 /filials/Ekaterinburg.5 /yekaterinburg
+
+	Redirect 301 /filials/Irkutsk.6/?openContacts=0 /irkutsk
+	Redirect 301 /filials/Irkutsk.6/ /irkutsk
+	Redirect 301 /filials/Irkutsk.6 /irkutsk
+
+	Redirect 301 /filials/Kemerovo.7/?openContacts=0 /kemerovo
+	Redirect 301 /filials/Kemerovo.7/ /kemerovo
+	Redirect 301 /filials/Kemerovo.7 /kemerovo
+
+	Redirect 301 /filials/Krasnoyarsk.8/ /krasnoyarsk
+	Redirect 301 /filials/Krasnoyarsk.8 /krasnoyarsk
+
+	Redirect 301 /filials/Moskva.25/ /moskva
+	Redirect 301 /filials/Moskva.25 /moskva
+
+	Redirect 301 /filials/Neryungri.12/?openContacts=0 /neryungri
+	Redirect 301 /filials/Neryungri.12/ /neryungri
+	Redirect 301 /filials/Neryungri.12 /neryungri
+
+	Redirect 301 /filials/Novosibirsk.13/?openContacts=0 /novosibirsk
+	Redirect 301 /filials/Novosibirsk.13/ /novosibirsk
+	Redirect 301 /filials/Novosibirsk.13 /novosibirsk
+
+	Redirect 301 /filials/Novokuznetsk.18/?openContacts=0 /novokuznetsk
+	Redirect 301 /filials/Novokuznetsk.18/ /novokuznetsk
+	Redirect 301 /filials/Novokuznetsk.18 /novokuznetsk
+
+	Redirect 301 /filials/Omsk.19/?openContacts=0 /omsk
+	Redirect 301 /filials/Omsk.19/ /omsk
+	Redirect 301 /filials/Omsk.19 /omsk
+
+	Redirect 301 /filials/Tomsk.20/?openContacts=0 /tomsk
+	Redirect 301 /filials/Tomsk.20/ /tomsk
+	Redirect 301 /filials/Tomsk.20 /tomsk
+
+	Redirect 301 /filials/Rostov-na-Donu.26/ /rostov-na-donu
+	Redirect 301 /filials/Rostov-na-Donu.26 /rostov-na-donu
+
+	Redirect 301 /filials/Ulan-Ude.23/ /ulan-ude
+	Redirect 301 /filials/Ulan-Ude.23 /ulan-ude
+
+	Redirect 301 /filials/Khabarovsk.21/?openContacts=0 /khabarovsk
+	Redirect 301 /filials/Khabarovsk.21/ /khabarovsk
+	Redirect 301 /filials/Khabarovsk.21 /khabarovsk
+
+	Redirect 301 /filials/Chita.24/?openContacts=0 /chita
+	Redirect 301 /filials/Chita.24/ /chita
+	Redirect 301 /filials/Chita.24 /chita
+
+	Redirect 301 /filials/Yakutsk.22/?openContacts=0 /yakutsk
+	Redirect 301 /filials/Yakutsk.22/ /yakutsk
+	Redirect 301 /filials/Yakutsk.22 /yakutsk
+
+	Redirect 301 /cp/actions/ /aktsii/
+
+	Redirect 301 /cp/mejdunarodnie_zheleznodorozhnyye_perevozki.html /perevozka-v-uskorennykh-poezdakh/
+
+	Redirect 301 /cp/mejdunarodnie_avtoperevozki.html /mezhdunarodnaya-avtoperevozka/
+
+	Redirect 301 /sform/request/ /cost-calculation/order.php
+	Redirect 301 /sform/track/ /
+	Redirect 301 /sform/calculate/ /cost-calculation/cost-calculation.php
+	Redirect 301 /cp/beebyte.html /
+	Redirect 301 /cp/pravila_perevozki.html /
+	Redirect 301 /response/ /feedback/idea.php
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-l
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+
+
+	#Don't favicon!
+	 RewriteCond %{REQUEST_FILENAME} !^favicon\.ico
+	 RewriteCond %{REQUEST_FILENAME}.php -f
+	 RewriteCond %{REQUEST_URI} !/$
+	 RewriteRule ^(.*)$ $1\.php
+
+
+</IfModule>
+
+<IfModule mod_dir.c>
+	DirectoryIndex index.php index.html
+</IfModule>
+
+<IfModule mod_expires.c>
+	ExpiresActive on
+	ExpiresByType image/jpeg "access plus 3 day"
+	ExpiresByType image/gif "access plus 3 day"
+</IfModule>
