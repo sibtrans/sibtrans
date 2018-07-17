@@ -6,7 +6,7 @@ bitrix/managed_cache/
 bitrix/modules/
 bitrix/otp/
 bitrix/panel/
-bitrix/php_interface
+
 bitrix/sounds/
 bitrix/themes/
 bitrix/tmp/
