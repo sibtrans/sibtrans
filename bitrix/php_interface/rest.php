@@ -60,9 +60,9 @@ function requestRest2($url,$data,$debug=false){
 function getUIN($un){
 	$fp = fsockopen("212.20.61.195",80,$errno,$errstr) or die('Error '.$errno.': '.$errstr);
 	if($fp){
-	
+		
 		$data = '{"contragents": [{"UN": "'.$un.'"}]}';
-		$headers = "POST http://212.20.61.195//KA_Limarev/hs/ServiceAPI/getUIN HTTP/1.1\r\n"
+		$headers = "POST http://212.20.61.195//BTK_Plus/hs/ServiceAPI/getUIN HTTP/1.1\r\n"
 			."Host: 212.20.61.195"."\r\n"
 			."Connection: Close"."\r\n"
 			."Content-type: application/x-www-form-urlencoded\r\n"

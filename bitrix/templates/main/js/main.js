@@ -1406,6 +1406,7 @@ $(document).ready(function(){
                     }
 
                     var arr_data_first = first_element_date.split('.');
+					
                     if(String(arr_data_first[0]).length == 1){
                         arr_data_first[0] = '0'+arr_data_first[0];
                     }
@@ -1413,22 +1414,23 @@ $(document).ready(function(){
                     if(String(arr_data_first[1]).length == 1){
                         arr_data_first[1] = '0'+arr_data_first[1];
                     }
-                    var data_first = arr_data_first[1]+'.'+arr_data_first[0]+'.'+arr_data_first[2];
+                    var data_first = arr_data_first[0]+'.'+arr_data_first[1]+'.'+arr_data_first[2];
 
                     
 
                     var arr_data_last = last_element_date.split('.');
+					
                     if(String(arr_data_last[0]).length == 1){
                         arr_data_last[0] = '0'+arr_data_last[0];
                     }
                     if(String(arr_data_last[1]).length == 1){
                         arr_data_last[1] = '0'+arr_data_last[1];
                     }
-                    var data_last = arr_data_last[1]+'.'+arr_data_last[0]+'.'+arr_data_last[2];
+                    var data_last = arr_data_last[0]+'.'+arr_data_last[1]+'.'+arr_data_last[2];
 					
-					$("input[name=data_1]").datepicker("setDate", data_last);
+					$("input[name=data_2]").datepicker("setDate", data_last);
 
-                    $("input[name=data_2]").datepicker("setDate", data_first);
+                    $("input[name=data_1]").datepicker("setDate", data_first);
 
                     reloadResult("requests_filter","./requests.request.php",$('.lc.requests .result'),"requests");
 
@@ -1495,6 +1497,7 @@ $(document).ready(function(){
 		}
 		
 		var link_C1 = findGetParameter('link_1C');
+		
 		if(link_C1 != null){
 			
 			$('#form-calk-order').css('opacity', '0.2');
@@ -1502,12 +1505,14 @@ $(document).ready(function(){
 			$('.loadingProcess').css('display', 'block');
 			
 			var un = findGetParameter('un');
+			
 			$.ajax({
 				url :'/cost-calculation/get-request.php',
 				type: "POST",
 				data: 'un='+un+'&code_1c='+link_C1,
 				dataType: 'json',
 				success:function(data){
+					console.log('-------------------------');
 					console.log(data);
 					
 					var stopRunCalrAuto = false;

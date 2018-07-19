@@ -1747,7 +1747,6 @@ $(document).ready(function() {
                  dataType: 'text',
 				 data: {selected: selected},
 				 success:function(data){
-
 					  if(!data){ 
 					 $('#content_cal').css("display","none"); 
 					  }else{ 
@@ -2149,27 +2148,34 @@ $(document).ready(function() {
 			var selectedRName = '';
 			var selectedRType = '';
 			
-			var numSelectedKey = 0;
 			$('#max_calc_result #result #content_cal tr').each(function(){
-				
-				//console.log($(this).attr('style'));
 				
 				if($(this).attr('style') != 'display:none;'){
 					var input = $(this).find('input');
-					if(input.attr('checked')){
+					if($(this).find('input').is(':checked')){
 						selectedRName = input.attr('id');
-						selectedRType = numSelectedKey;
 					}
-					numSelectedKey++;
 				}
 			});
-			//console.log('numSelectedKey '+numSelectedKey);
+			
+			if(selectedRName == 'скорый'){
+				selectedRType = 0;
+			}
+			if(selectedRName == 'стандарт'){
+				selectedRType = 1;
+			}
+			if(selectedRName == 'грузовой'){
+				selectedRType = 2;
+			}
 			//console.log('NameSC: '+selectedRName+', ID_SC:'+selectedRType);
+			
+			selected.push({ID: 'NameSC', value: selectedRName });
+			selected.push({ID: 'ID_SC', value: selectedRType });
 			
 
 			$.ajax({
 				type:'POST',
-				url:'/cost-calculation/order-send2.php',
+				url:'/cost-calculation/order-send.php',
 				dataType:'text',
 				data: {selected: selected}, //$('#form-calk-order').serialize()  + '&OrderType=' + $("[data-orderType=current]").attr('id'),
 				success: function(response){

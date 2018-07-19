@@ -17,6 +17,13 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
+		"Заявки", 
+		"/lc/requests.php", 
+		Array(), 
+		Array("NEED_FULL"=>"Y"), 
+		"" 
+	),
+	Array(
 		"Перевозки", 
 		"/lc/transportations.php", 
 		Array(), 

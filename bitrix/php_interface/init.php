@@ -199,10 +199,12 @@ function getUserTransportaitionsArch($data){
 
 function getUserRequests($data){
 	
-	if($data["ss_code"] == ''){
+	if($data['ss_code'] == ''){
 		$codes = getUIN($data["un"]);
 		$arr = json_decode($codes, true);
 		$data['ss_code'] = $arr['contragents'][0]['ss_code'];
+		$_SESSION['ss_code'] = $data['ss_code'];
+	}else{
 		$_SESSION['ss_code'] = $data['ss_code'];
 	}
 	
@@ -210,9 +212,11 @@ function getUserRequests($data){
 	$data['data_1'] = $data1[2].$data1[1].$data1[0];
 	$data2 = explode('.', $data['data_2']);
 	$data['data_2'] = $data2[2].$data2[1].$data2[0];
-	$r=requestRest2('http://212.20.61.195//KA_Limarev/hs/ServiceAPI/getListRequests/', $data, false);
+	$r=requestRest2('http://212.20.61.195//BTK_Plus/hs/ServiceAPI/getListRequests/', $data, false);
 	return $r;
 }
+//KA_Limarev/hs/ServiceAPI
+//BTK_Plus/hs/ServiceAPI
 function getUserRequest($un, $ss_code, $code_1c){
 	if($ss_code == ''){
 		$codes = getUIN($un);
@@ -224,7 +228,7 @@ function getUserRequest($un, $ss_code, $code_1c){
 		'ss_code' => $ss_code,
 		'link_1C' => $code_1c
 	);
-	$r=requestRest2('http://212.20.61.195//KA_Limarev/hs/ServiceAPI/getRequest/', $data, false);
+	$r=requestRest2('http://212.20.61.195//BTK_Plus/hs/ServiceAPI/getRequest/', $data, false);
 	return $r;
 	
 }
@@ -750,4 +754,33 @@ $fp = fsockopen("212.20.61.195",80,$errno,$errstr) or die('Error '.$errno.': '.$
 		return "LoadDataService();";
 }
 
-
+function UpdateUINUsers (){
+	
+	$filter = Array
+        (
+        "GROUP_ID" => 7,
+		"!UF_UN" => "",
+		"=UF_SS_CODE" => ""
+    );
+	
+	$rsUsers = CUser::GetList(($by = "id"), ($order = "desc"), $filter, array("SELECT" =>array("UF_UN", "UF_SS_CODE")));
+	
+	while ($arUser = $rsUsers ->Fetch()){
+		
+		$ID = $arUser["ID"];
+		$getArrServUIN = getUIN($arUser["UF_UN"]);
+		$getArrServUIN = json_decode($getArrServUIN, true);
+		$ss_code = $getArrServUIN['contragents'][0]['ss_code'];
+		
+		if($ss_code != ''){
+			// add ss_code user
+			$user = new CUser;
+			$fields = Array(
+			  "UF_SS_CODE" => $ss_code,
+			  );
+			$user->Update($ID, $fields);
+		}
+	}
+	return "UpdateUINUsers();";
+	
+}
