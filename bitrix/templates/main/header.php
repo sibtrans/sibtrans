@@ -1237,7 +1237,7 @@ function getSityFromSession(handleData, city) {
 				url:'/kurs-valyut.php',
 				type: "POST",
 				dataType: "json",
-				data:'', 
+				data:'',
 				async: true,
 				success:function(data){
 					console.log(data,typeof data);

@@ -1466,17 +1466,24 @@ $(document).ready(function() {
 						});
 
 						$('[name^="InputForChBoxServiceDelivOut"]').each(function(){
-							rules[$(this).attr("name")]={
-											required: true,
-											number:true
-								};
+							
+							if($(this).parent().prev().prev().prev().is(':checked')){
+							
+								rules[$(this).attr("name")]={
+												required: true,
+												number:true
+									};
+						
+							}
 
 						});
 						$('[name^="InputForChBoxServiceDelivOut"]').each(function(){
-							messages[$(this).attr("name")]={
-											required: "Это поле должно быть заполнено",
-											number: "Некорректные данные"
-								};
+							if($(this).parent().prev().prev().prev().is(':checked')){
+								messages[$(this).attr("name")]={
+												required: "Это поле должно быть заполнено",
+												number: "Некорректные данные"
+									};
+							}
 
 						});
 
@@ -2175,12 +2182,12 @@ $(document).ready(function() {
 
 			$.ajax({
 				type:'POST',
-				url:'/cost-calculation/order-send.php',
+				url:'/cost-calculation/order-send2.php',
 				dataType:'text',
 				data: {selected: selected}, //$('#form-calk-order').serialize()  + '&OrderType=' + $("[data-orderType=current]").attr('id'),
 				success: function(response){
 					//$('#result-order-send').html(response); 
-					//console.log(response);
+					console.log(response);
 
 					var result = $(response).find('#result_order_send').text();
 					if($.trim(result) !== "1"){
@@ -2201,7 +2208,7 @@ $(document).ready(function() {
 					}
 					else if($.trim(result) == "1"){
 
-						window.location.href = "../cost-calculation/order-secsess.php";
+						//window.location.href = "../cost-calculation/order-secsess.php";
 
 						//$(function () {
 

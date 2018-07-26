@@ -115,7 +115,6 @@ $(document).ready(function() {
 
 		$().ready(function() {
 			
-			console.log('11111');
 			// get code_1c
 			$.ajax({ 
 				url :'/cost-calculation/userdata.php',
@@ -1748,7 +1747,6 @@ $(document).ready(function() {
                  dataType: 'text',
 				 data: {selected: selected},
 				 success:function(data){
-
 					  if(!data){ 
 					 $('#content_cal').css("display","none"); 
 					  }else{ 
@@ -1923,8 +1921,7 @@ $(document).ready(function() {
             }
 
 
-
-
+		
 		function OrderSend() // отправка заявки
 		{
 					$('.btn-Order').attr("disabled","disabled");
@@ -2101,8 +2098,80 @@ $(document).ready(function() {
 
 
 			selected.push({ID: 'browser', value: navigator.sayswho });
-			selected.push({ID: 'code_1c',  value: $('#code_1c').val() });
-
+			selected.push({ID: 'code_1c', value: $('#code_1c').val() });
+			
+			/*
+			$('#pay_ur_IsSenderIsResiver option:selected').text()
+			*/
+			
+			var autoZapolnenitFirst = 0;
+			
+			
+			
+			if($('#sender_ur_Zapolnit_lc_Id').is(':checked')){
+				selected.push({ID: 'duble_data_user1', value: "Y" });
+				autoZapolnenitFirst = 1;
+				//console.log('duble_data_user1:Y');
+			}else{
+				selected.push({ID: 'duble_data_user1', value: "" });
+				//console.log('duble_data_user1:N');
+			}
+			
+			if(autoZapolnenitFirst == 1){
+			
+				
+				if($('#resiv_ur_IsSenderIsPayer option:selected').text() == 'Отправитель'){
+					selected.push({ID: 'duble_data_user2', value: "Y" });
+					//console.log('duble_data_user2:Y');
+				}else{
+					selected.push({ID: 'duble_data_user2', value: "" });
+					//console.log('duble_data_user2:N');
+				}
+				
+				if($('#pay_ur_IsSenderIsResiver option:selected').text() == 'Отправитель'){
+					selected.push({ID: 'duble_data_user3', value: "Y" });
+					//console.log('duble_data_user3:Y');
+				}else{
+					selected.push({ID: 'duble_data_user3', value: "" });
+					//console.log('duble_data_user3:N');
+				} 
+				
+			}else{
+				selected.push({ID: 'duble_data_user1', value: "" });
+				selected.push({ID: 'duble_data_user2', value: "" });
+				selected.push({ID: 'duble_data_user3', value: "" });
+			}
+			
+			selected.push({ID: 'NameSC', value: "" });
+			selected.push({ID: 'ID_SC', value: "" });
+			
+			var selectedRName = '';
+			var selectedRType = '';
+			
+			$('#max_calc_result #result #content_cal tr').each(function(){
+				
+				if($(this).attr('style') != 'display:none;'){
+					var input = $(this).find('input');
+					if($(this).find('input').is(':checked')){
+						selectedRName = input.attr('id');
+					}
+				}
+			});
+			
+			if(selectedRName == 'скорый'){
+				selectedRType = 0;
+			}
+			if(selectedRName == 'стандарт'){
+				selectedRType = 1;
+			}
+			if(selectedRName == 'грузовой'){
+				selectedRType = 2;
+			}
+			//console.log('NameSC: '+selectedRName+', ID_SC:'+selectedRType);
+			
+			selected.push({ID: 'NameSC', value: selectedRName });
+			selected.push({ID: 'ID_SC', value: selectedRType });
+			
 
 			$.ajax({
 				type:'POST',
